@@ -1,7 +1,7 @@
 node ('master')
  {
   
-  def mavenHome = tool name: "maven3.6.3"
+  def mavenHome = tool name: "maven3.8.2"
   
       echo "GitHub BranhName ${env.BRANCH_NAME}"
       echo "Jenkins Job Number ${env.BUILD_NUMBER}"
@@ -23,7 +23,7 @@ node ('master')
  sh "${mavenHome}/bin/mvn clean package"
  }
  
-  /*
+  
  stage("ExecuteSonarQubeReport")
  {
  sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -40,7 +40,7 @@ node ('master')
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@15.206.91.239:/opt/apache-tomcat-9.0.34/webapps/" 
   }
  }
- 
+ /*
  stage('EmailNotification')
  {
  mail bcc: 'devopstrainingblr@gmail.com', body: '''Build is over
