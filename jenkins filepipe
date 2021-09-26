@@ -25,6 +25,7 @@ node
         }
         
     }
+    /*
     stage('send email notification')
     {
         mail bcc: '', body: '''build over 
@@ -34,4 +35,5 @@ node
 regrads,
 karteek.''', cc: '', from: '', replyTo: '', subject: 'build over', to: 'karteekreddy453@gmail.com'
     }
+    */
 }
