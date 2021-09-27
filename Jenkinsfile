@@ -13,6 +13,7 @@ node('node1')
     {
         sh "${mavenhome}/bin/mvn sonar:sonar"
     }
+    /*
     stage('upload artifact in nexus')
     {
         sh "${mavenhome}/bin/mvn clean deploy"
@@ -25,7 +26,7 @@ node('node1')
         }
         
     }
-    /*
+    
     stage('send email notification')
     {
         mail bcc: '', body: '''build over 
