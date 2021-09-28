@@ -15,7 +15,7 @@ node('node1')
     }
     stage('upload artifact in nexus')
     {
-        sh "${mavenhome}/bin/mvn clean deploy"
+        sh "${mavenhome}/bin/mvn deploy"
     }
     stage('deploy app in to tomcat')
     {
